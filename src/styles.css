@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Body*/
+    --body-background: #fffafa;
+    --body-color: #1a1a1a;
+
+    /*Layout*/
+    --border-color: #e6efff;
+    --input-background: #e6efff;
+    --color-shadow: #e4e4e4;
+    --box-shaddow: #e4e4e450;
+    --button-background: #0071ff;
+    --button-background-dark: #0c35e8;
+
+    /*Text*/
+    --color-white: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--body-background);
+    color: var(--body-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+#container {
+    width: 100%;
+}
+
+#box {
+    width: 744px;
+    margin: 20px auto;
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 100px;
+}
+
+.info {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#box p {
+    font-weight: 600;
+}
+
+/* -------------- BOX SAC -------------- */
+#box-sac {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 4px 6px 0px -3px var(--box-shaddow);
+}
+
+.values h2 {
+    font-size: 2.0rem;
+    line-height: 50px;
+}
+
+.values {
+    margin-bottom: 12px;
+}
+
+input {
+    border: none;
+    box-shadow: 1px 1px 4px 0px var(--color-shadow);
+}
+
+input:focus {
+    outline: 0;
+}
+
+.row-input {
+    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-input {
+    width: 100%;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box-input:nth-last-child(1) {
+    padding: 0;
+}
+
+.box-input input {
+    background-color: var(--input-background);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.7rem; 
+}
+
+.box-input label {
+    font-size: 1.4rem;
+    line-height: 30PX;
+}
+
+.button {
+    background-color: var(--button-background);
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+.button:hover {
+    background-color: var(--button-background-dark);
+}
+
+.button-clear {
+    color: var(--body-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* -------------- VALUE INPUT -------------- */
+.value-input {
+    background-color: var(--input-background);
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0px var(--color-shadow);
+
+    display: flex;
+    align-items: center;
+}
+
+.value-input input {
+    background-color: initial;
+    box-shadow: none;
+}
+
+.value-input span {
+   font-size: 1.7rem;
+   border-right: 2px solid var(--color-number);
+   padding: 0 10px;
+}
+
+/* -------------- TABLE -------------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* -------------- THEAD -------------- */
+thead tr {
+    background-color: var(--input-background);
+    line-height: 48px;
+    text-align: center;
+    font-weight: 700;
+}
+
+thead tr td:nth-last-child(1) {
+    border-radius: 0px 8px 0 0;
+}
+
+thead tr td:nth-last-child(4) {
+    border-radius: 8px 0px 0 0;
+}
+
+thead tr td {
+    border-right: 2px solid var(--input-background);
+}
+
+thead tr td:nth-child(4) {
+    border-right: none;
+}
+
+/* -------------- TBODY -------------- */
+tbody tr {
+    line-height: 48px;
+}
+
+tbody tr td {
+    border: 2px solid var(--input-background);
+    padding-left: 5px;
+}
+
+/* -------------- TFOOT -------------- */
+tfoot tr {
+    line-height: 48px;
+}
+
+tfoot tr td {
+    border: 2px solid var(--input-background);
+    background-color: var(--input-background);
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+/* -------------- RESPONSIVE -------------- */
+@media screen and (max-width: 760px) {
+    #box {
+        width: 540px;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        line-height: initial;
+    }
+    
+    .row-input {
+        display: initial;
+    }
+
+    .box-input label, 
+    .button {
+        margin-top: 24px;
+    }
+
+    .button-center {
+        text-align: center;
+    }
+
+    #value-fees {
+        width: 98%;
+    }
+
+    #result {
+        margin-top: 24px;
+    }
+
+    table {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #box {
+        width: 90%;
+    }
+
+    #box-sac {
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    table {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #box {
+        width: 310px;
+    }
+}
