@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./src/styles.css">
+        <title>Simulação de Financiamento</title>
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <div id="box">
+                    <section>
+                        <div class="info">
+                            <h1 class="title">Calculadora de Financiamento SAC</h1>
+                            <p>
+                                Cálculo de estimativa de valor de uma prestação a ser paga em um financiamento SAC (Sistema de amortização constante).
+                            </p>
+                        </div>
+                        
+                    </section>
+
+                    <section>
+                        <div id="box-sac">
+                            <section>
+                                <div class="values">
+                                    <h2>Cálculo de financiamento SAC</h2>
+                                    <form action="">
+                                        <div class="row-input">
+                                            <div class="box-input">
+                                                <label for="value-finance">Valor</label>
+                                                <div class="value-input">
+                                                    <span>R$</span>
+                                                    <input 
+                                                        type="number" 
+                                                        id="value-finance" 
+                                                        name="value-finance" 
+                                                        placeholder="200000" 
+                                                        alt="Inserir valor de financiamento" 
+                                                    />
+                                                </div>
+                                            </div>
+        
+                                            <div class="box-input">
+                                                <label for="value-year">Prazo(anos)</label>
+                                                <input 
+                                                    type="number" 
+                                                    id="value-year" 
+                                                    name="value-year" 
+                                                    placeholder="20" 
+                                                    alt="Inserir valor do prazo em anos"
+                                                />
+                                            </div>
+        
+                                            <div class="box-input">
+                                                <label for="value-fees">Juros ao ano</label>
+                                                <input 
+                                                    type="number" 
+                                                    id="value-fees" 
+                                                    name="value-fees" 
+                                                    placeholder="0.08" alt="Inserir valor dos juros" 
+                                                />
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="button-center">
+                                            <input type="submit" class="button" alt="Enviar" />
+                                            <a href="" class="button-clear">Limpar</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </section>
+                        
+                            <section>
+                                <div id="result">
+                                    <h3>Resultado</h3>
+                                    <div class="row-input">
+                                        <div class="box-input">
+                                            <label for="calc-months">Prazo(meses)</label>
+                                            <input 
+                                                type="number" 
+                                                id="calc-months" 
+                                                name="calc-months" 
+                                                placeholder="240"
+                                                alt="Valor do prazo em meses"
+                                                readonly 
+                                            />
+                                        </div>
+        
+                                        <div class="box-input">
+                                            <label for="calc-fees">juros ao mês</label>
+                                            <input 
+                                                type="number" 
+                                                id="calc-fees" 
+                                                name="calc-fees" 
+                                                placeholder="0,006434030110003"
+                                                alt="Valor do juros ao mês"
+                                                readonly 
+                                            />
+                                        </div>
+        
+                                        <div class="box-input">
+                                            <label for="calc-accumulated">Juros acumulados</label>
+                                            <input 
+                                                type="number" 
+                                                id="calc-accumulated" 
+                                                name="calc-accumulated" 
+                                                placeholder="--"
+                                                alt="Valor dos juros acumulados"
+                                                readonly 
+                                            />
+                                        </div>
+                                    </div>
+        
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Prestação</th>
+                                                <th>Amortização</th>
+                                                <th>Juros</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+        
+                                        <tfoot>
+                                            <tr>
+                                                <td>Totais</td>
+                                                <td>0</td>
+                                                <td>--</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <script src="src/scripts.js"></script>
+    </body>
+</html>
